@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PiGCV-AttoStream | High-Precision $314,159 Micro-Streaming Protocol</title>
+  <meta name="description" content="Decentralized Layer-2 High-Precision Fractional Micro-Streaming & POS Protocol for Pi Network $314,159 GCV Economy.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">π</div>
+        <div>
+          <div class="brand-title">PiGCV AttoStream</div>
+          <div class="brand-subtitle">Layer-2 Micro-Streaming Protocol</div>
+        </div>
+      </a>
+
+      <div class="gcv-badge" id="gcvBadge">
+        <div class="pulsing-dot"></div>
+        <span>GCV: 1 π = $314,159.00 USD</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-pill">
+        <span>⚡ Precision-Engineered for $314,159 Valuation</span>
+      </div>
+      <h1 class="hero-title">
+        The High-Precision <span class="gradient-text-gold">Micro-Streaming</span> &amp; 
+        <span class="gradient-text-purple">Fractional Settlement</span> Protocol
+      </h1>
+      <p class="hero-subtitle">
+        When 1 Pi is pegged to $314,159, everyday commerce requires sub-satoshi precision. 
+        AttoStream eliminates float errors by streaming Atto-Pi (10⁻¹⁸) in real-time for coffee, micro-tips, IoT bandwidth, and point-of-sale checkout.
+      </p>
+
+      <!-- Key Metrics Row -->
+      <div class="metrics-grid">
+        <div class="metric-card glass">
+          <div class="metric-label">Global Consensus Peg</div>
+          <div class="metric-val gradient-text-gold">$314,159.00</div>
+          <div class="metric-sub">Multi-Validator BFT Quorum</div>
+        </div>
+        <div class="metric-card glass">
+          <div class="metric-label">Micro-Precision Unit</div>
+          <div class="metric-val">1 Atto-Pi (aπ)</div>
+          <div class="metric-sub">10⁻¹⁸ Pi = $0.000000000000314</div>
+        </div>
+        <div class="metric-card glass">
+          <div class="metric-label">Active Micro-Streams</div>
+          <div class="metric-val" id="metricActiveStreams">1,842</div>
+          <div class="metric-sub">Continuous Real-Time Channels</div>
+        </div>
+        <div class="metric-card glass">
+          <div class="metric-label">Oracle BFT Nodes</div>
+          <div class="metric-val" style="color: var(--green-accent);">12 / 12 Active</div>
+          <div class="metric-sub">100% Consensus Heartbeat</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs-nav" aria-label="Protocol Features">
+      <button class="tab-btn active" id="tabBtnConverter" data-target="tabConverter">GCV Unit Matrix</button>
+      <button class="tab-btn" id="tabBtnStream" data-target="tabStream">Live Micro-Stream Engine</button>
+      <button class="tab-btn" id="tabBtnPOS" data-target="tabPOS">Merchant POS Terminal</button>
+      <button class="tab-btn" id="tabBtnOracle" data-target="tabOracle">BFT Oracle Nodes</button>
+      <button class="tab-btn" id="tabBtnContracts" data-target="tabContracts">Smart Contracts</button>
+    </nav>
+
+    <!-- TAB 1: GCV Unit Matrix & Instant Converter -->
+    <section class="tab-content active" id="tabConverter">
+      <div class="section-grid-2">
+        <div class="panel-card glass">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">GCV Fractional Calculator</h2>
+              <p class="panel-desc">Convert fiat currencies into precise Atto/Micro fractions of Pi.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inputUsd">
+              <span>Enter Amount in USD ($)</span>
+              <span id="rateLabel">1 USD = 0.000003183 π</span>
+            </label>
+            <div class="input-wrapper">
+              <input type="number" id="inputUsd" class="input-field" value="3.50" step="0.01" min="0">
+              <span class="input-addon">USD</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Real-World Quick Presets</label>
+            <div class="chips-row">
+              <button class="chip-btn" data-usd="3.50">☕ Espresso ($3.50)</button>
+              <button class="chip-btn" data-usd="12.00">🍔 Lunch Meal ($12.00)</button>
+              <button class="chip-btn" data-usd="45.00">🌐 1-Mo Fiber Internet ($45.00)</button>
+              <button class="chip-btn" data-usd="999.00">📱 Flagship Phone ($999.00)</button>
+              <button class="chip-btn" data-usd="38990.00">🚗 EV Tesla Model 3 ($38,990)</button>
+              <button class="chip-btn" data-usd="314159.00">🏡 Luxury Villa ($314,159)</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="currencySelect">Compare in Local Fiat</label>
+            <select id="currencySelect" class="input-field" style="cursor: pointer;">
+              <option value="1">USD ($ - United States Dollar)</option>
+              <option value="16000">IDR (Rp - Indonesian Rupiah)</option>
+              <option value="0.92">EUR (€ - Euro)</option>
+              <option value="155">JPY (¥ - Japanese Yen)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="panel-card glass glass-gold-glow">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Sub-Unit Breakdown Matrix</h2>
+              <p class="panel-desc">Mathematically exact representation with 18 decimals</p>
+            </div>
+          </div>
+
+          <table class="breakdown-table">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="unit-name">Full Pi (π)<span class="unit-power">10⁰</span></div>
+                </td>
+                <td class="unit-val" id="rowFullPi">0.00001114 π</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="unit-name">Milli-Pi (mπ)<span class="unit-power">10⁻³ ($314.16)</span></div>
+                </td>
+                <td class="unit-val" id="rowMilliPi">0.0111 mπ</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="unit-name">Micro-Pi (µπ)<span class="unit-power">10⁻⁶ ($0.314)</span></div>
+                </td>
+                <td class="unit-val" id="rowMicroPi">11.14 µπ</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="unit-name">Nano-Pi (nπ)<span class="unit-power">10⁻⁹ ($0.000314)</span></div>
+                </td>
+                <td class="unit-val" id="rowNanoPi">11,140.85 nπ</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="unit-name">Pico-Pi (pπ)<span class="unit-power">10⁻¹²</span></div>
+                </td>
+                <td class="unit-val" id="rowPicoPi">11,140,854 pπ</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="unit-name">Atto-Pi (aπ)<span class="unit-power">10⁻¹⁸</span></div>
+                </td>
+                <td class="unit-val" id="rowAttoPi">11,140,854,440,000 aπ</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="background: rgba(245, 166, 35, 0.08); border-left: 3px solid var(--gold-primary); padding: 12px; border-radius: 6px; font-size: 13px; color: var(--gold-light);">
+            💡 <strong>Observation:</strong> At $314,159 GCV, a $3.50 cup of coffee is exactly <strong>11 Micro-Pi (µπ)</strong>. Pioneers never have to say "0.00001114", simply "11 Micro-Pi".
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: Live Micro-Stream Engine -->
+    <section class="tab-content" id="tabStream">
+      <div class="section-grid-2">
+        <div class="panel-card glass">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Initialize Payment Stream</h2>
+              <p class="panel-desc">Stream continuous sub-cent Atto-Pi per second without gas friction.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="streamRecipient">Recipient Address</label>
+            <input type="text" id="streamRecipient" class="input-field" value="GD7NORDIC...FLOW7">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="streamPurpose">Stream Service Category</label>
+            <select id="streamPurpose" class="input-field">
+              <option value="wifi">High-Speed Satellite Wi-Fi ($0.02 / min)</option>
+              <option value="ev">Tesla Supercharger KW/h Feed ($0.30 / min)</option>
+              <option value="api">AI Inference Token Streaming ($0.005 / sec)</option>
+              <option value="freelance">Live Developer Consulting ($1.50 / min)</option>
+            </select>
+          </div>
+
+          <div class="section-grid-2" style="gap: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="streamBudget">Total Budget ($ USD)</label>
+              <input type="number" id="streamBudget" class="input-field" value="10.00" min="0.5" step="0.5">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="streamDuration">Duration (Seconds)</label>
+              <input type="number" id="streamDuration" class="input-field" value="60" min="10" step="5">
+            </div>
+          </div>
+
+          <button class="btn-primary" id="btnStartStream">
+            <span>⚡ Start Continuous Atto-Stream</span>
+          </button>
+        </div>
+
+        <div class="stream-monitor-card" id="streamMonitor">
+          <div class="panel-header">
+            <div>
+              <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold-primary); font-weight: 700;">Live Channel Status</div>
+              <h2 class="panel-title" id="streamTitleDisplay">Streaming Wi-Fi Gateway</h2>
+            </div>
+            <div class="pulsing-dot" id="streamActiveDot"></div>
+          </div>
+
+          <div class="ticker-display">
+            <div class="ticker-label">Streamed Value (Atto-Pi)</div>
+            <div class="ticker-atto" id="liveTickerAtto">0 aπ</div>
+            <div class="ticker-usd" id="liveTickerUsd">+$0.000000 USD</div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
+              <span>Flow Completion</span>
+              <span id="streamProgressLabel">0%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="streamProgressBar"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px;">
+            <button class="btn-secondary" style="flex: 1;" id="btnClaimStream">Claim Accrued aπ</button>
+            <button class="btn-secondary" style="flex: 1; border-color: rgba(239, 68, 68, 0.4); color: var(--red-accent);" id="btnStopStream">Cancel &amp; Refund</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Merchant POS Terminal -->
+    <section class="tab-content" id="tabPOS">
+      <div class="section-grid-2">
+        <div class="panel-card glass">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Merchant Checkout Catalog</h2>
+              <p class="panel-desc">Select an item to simulate an instant Pioneer GCV checkout.</p>
+            </div>
+          </div>
+
+          <div class="pos-catalog" id="posCatalog">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="panel-card glass glass-gold-glow">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Pioneer Tap-to-Pay Invoice</h2>
+              <p class="panel-desc">Generated via EIP-712 Pi Cryptographic Intent</p>
+            </div>
+          </div>
+
+          <div class="qr-container">
+            <div class="qr-code">π</div>
+            <div class="qr-caption" id="qrInvoiceId">INVOICE #5081 • READY</div>
+          </div>
+
+          <div style="text-align: center; margin-top: 10px;">
+            <div style="font-size: 14px; color: var(--text-muted);" id="posSelectedName">Espresso Coffee</div>
+            <div style="font-family: var(--font-mono); font-size: 26px; font-weight: 800; color: var(--gold-light);" id="posSelectedPi">
+              11 µπ (Micro-Pi)
+            </div>
+            <div style="font-size: 13px; color: var(--green-accent);" id="posSelectedFiat">$3.50 USD (Peg: $314,159)</div>
+          </div>
+
+          <button class="btn-primary" id="btnSimulatePay">
+            <span>💳 Simulate Pioneer Signature &amp; Pay</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: BFT Oracle Nodes -->
+    <section class="tab-content" id="tabOracle">
+      <div class="panel-card glass">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Byzantine Fault Tolerant Oracle Network</h2>
+            <p class="panel-desc">Decentralized nodes attesting to the $314,159.00 USD consensus feed.</p>
+          </div>
+          <div class="gcv-badge">
+            <div class="pulsing-dot"></div>
+            <span>Consensus: 100% (12/12 Nodes Agree)</span>
+          </div>
+        </div>
+
+        <div class="nodes-grid" id="oracleNodesGrid">
+          <!-- Populated via Javascript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: Smart Contracts -->
+    <section class="tab-content" id="tabContracts">
+      <div class="panel-card glass">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Smart Contracts Architecture</h2>
+            <p class="panel-desc">High-assurance Solidity contracts handling Atto-precision arithmetic.</p>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-secondary" id="btnContractOracle">PiGCVOracle.sol</button>
+            <button class="btn-secondary" id="btnContractStream">AttoStreamCore.sol</button>
+            <button class="btn-secondary" id="btnContractPOS">GCVMerchantPOS.sol</button>
+          </div>
+        </div>
+
+        <pre class="code-viewer"><code id="codeDisplay">// Select a contract above to inspect code...</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toastMessage">Notification</div>
+
+  <footer>
+    <p>PiGCV-AttoStream Protocol © 2026. Designed for Pi Network $314,159 Global Consensus Value (GCV) Fractional Economy.</p>
+    <p style="margin-top: 6px; font-size: 12px; color: var(--text-dim);">Open Source Community Specification • Micro-Streaming Layer 2</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

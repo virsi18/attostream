@@ -1,0 +1,22 @@
+{
+  "name": "pigcv-attostream-protocol",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "High-Precision Micro-Streaming & Fractional Settlement Protocol for Pi Network $314,159 GCV Economy",
+  "main": "sdk/atto-pi.js",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node sdk/test.js"
+  },
+  "keywords": [
+    "pi-network",
+    "gcv",
+    "314159",
+    "smart-contracts",
+    "micro-streaming",
+    "layer2",
+    "web3"
+  ],
+  "author": "PiGCV Protocol Foundation",
+  "license": "MIT"
+}
